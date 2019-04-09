@@ -10,7 +10,7 @@ class App extends Component {
   
   constructor (props) {
     super(props);
-    this.props.addItem(todoItems);
+    
     this.addItem = this.addItem.bind(this);
     this.removeItem = this.removeItem.bind(this);
     this.markTodoDone = this.markTodoDone.bind(this);
@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <div id="main">
         <TodoHeader />
-        <TodoList items={this.props.initItems} removeItem={this.removeItem} markTodoDone={this.markTodoDone}/>
+        <TodoList items={this.state.todoItems} removeItem={this.removeItem} markTodoDone={this.markTodoDone}/>
         <TodoForm addItem={this.addItem} />
       </div>
 

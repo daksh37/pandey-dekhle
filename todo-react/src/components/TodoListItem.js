@@ -19,6 +19,7 @@ export default class TodoListItem extends Component{
             <li className='list-group-item'>
                 <div className='todoClass'>
                 <span className="glyphicon glyphicon-ok icon" aria-hidden="true" onClick={this.onClickDone}></span>
+                {this.props.item.value}
                 <button type="button" className="close" onClick={this.onClickClose}>&times;</button>
                 </div>
             </li>
